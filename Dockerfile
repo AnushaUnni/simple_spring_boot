@@ -2,9 +2,6 @@
 FROM openjdk:8-jdk-alpine as javabuilder
 # Set the current working directory inside the image
 WORKDIR /app
-# Copy maven executable to the image
-COPY mvnw .
-COPY .mvn .mvn
 # Copy the pom.xml file
 COPY pom.xml .
 # Copy the project source
