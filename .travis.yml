@@ -4,7 +4,6 @@ jdk:
   - openjdk8
 services:
   - docker
-  - mysql
 
 before_install:
   - docker pull openjdk:8-jdk-alpine
