@@ -18,3 +18,16 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take the images and push to docker hub
   - docker push anushaunni/simple_spring_boot
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: simple_spring_boot
+  env: SimpleSpringBoot-env
+  bucket_name: elasticbeanstalk-us-east-1-300813874739
+  bucket_path: simple_spring_boot
+  edge: true # opt in to dpl v2
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
