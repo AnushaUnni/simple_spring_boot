@@ -2,10 +2,6 @@
 FROM openjdk:8-jdk-alpine as javabuilder
 # Set the current working directory inside the image
 WORKDIR /app
-# Copy the pom.xml file
-COPY pom.xml .
-# Copy the project source
-COPY src src
 # The application's jar file
 ARG JAR_FILE=target/simple-0.0.1-SNAPSHOT.jar
 # Add the application's jar to the container
