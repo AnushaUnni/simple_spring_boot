@@ -22,10 +22,10 @@ after_success:
 deploy:
   provider: elasticbeanstalk
   region: us-east-1
-  app: simple_spring_boot
-  env: SimpleSpringBoot-env
+  app: springbootdocker
+  env: Springbootdocker-env
   bucket_name: elasticbeanstalk-us-east-1-300813874739
-  bucket_path: simple_spring_boot
+  bucket_path: springbootdocker
   edge: true # opt in to dpl v2
   on:
     branch: master
