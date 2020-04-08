@@ -1,0 +1,18 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "simple_spring_boot",
+      "image": "anushaunni/simple_spring_boot",
+      "hostname": "simple_spring_boot",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 9000,
+          "containerPort": 9001
+        }
+      ]
+    }
+  ]
+}
